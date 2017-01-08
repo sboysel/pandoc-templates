@@ -88,7 +88,7 @@ $endfor$
 $endif$
 \newif\ifbibliography
 $if(natbib)$
-\usepackage{natbib}
+\usepackage$if(natbiboptions)$[$for(natbiboptions)$$natbiboptions$$sep$,$endfor$]$endif${natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
